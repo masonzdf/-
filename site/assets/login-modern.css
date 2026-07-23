@@ -15,6 +15,15 @@
   font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
 }
 .dg-embedded-card { padding: 24px !important; }
+img[src*="construction-illustration-custom.png"] {
+  display: block;
+  width: min(100%, 480px) !important;
+  height: auto !important;
+  margin-right: auto;
+  margin-left: auto;
+  object-fit: contain;
+  object-position: center;
+}
 .dg-login-shell {
   display: grid;
   grid-template-columns: minmax(0, 1.38fr) minmax(420px, .72fr);
