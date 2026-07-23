@@ -1,0 +1,48 @@
+﻿@font-face {
+  font-family: "sz-action-iconfont"; /* Project id 5202837 */
+  src: url('./action-iconfont.woff2') format('woff2'),
+       url('./action-iconfont.woff') format('woff'),
+       url('./action-iconfont.ttf') format('truetype');
+}
+
+.sz-action-iconfont {
+  font-family: "sz-action-iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiechu:before {
+  content: "\e6e2";
+}
+
+.icon-jilu:before {
+  content: "\e6e3";
+}
+
+.icon-delete:before {
+  content: "\e6d9";
+}
+
+.icon-reset-password:before {
+  content: "\e6da";
+}
+
+.icon-download:before {
+  content: "\e6db";
+}
+
+.icon-edit:before {
+  content: "\e6dc";
+}
+
+.icon-view:before {
+  content: "\e6dd";
+}
+
+.icon-add:before {
+  content: "\e6de";
+}
+
+

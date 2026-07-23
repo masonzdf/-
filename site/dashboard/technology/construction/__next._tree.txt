@@ -1,0 +1,5 @@
+:HL["/_next/static/chunks/09gpka9yibh-b.css","style"]
+:HL["/assets/icons/iconfont/action-iconfont.css","style"]
+:HL["/assets/icons/iconfont/menu-iconfont.css","style"]
+:HL["/assets/icons/iconfont/common-iconfont.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"dashboard","param":null,"prefetchHints":0,"slots":{"children":{"name":"technology","param":null,"prefetchHints":0,"slots":{"children":{"name":"construction","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"vrFWqDQeIvFbiX8wheHsN"}
