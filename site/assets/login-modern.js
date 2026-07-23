@@ -17,51 +17,38 @@
   };
 
   const appMarkup = `
-    <div class="dg-login-shell">
-      <section class="dg-login-hero">
-        <div class="dg-login-brand">
-          <p class="dg-login-eyebrow">DONGGA RESERVOIR · DIGITAL CONSTRUCTION</p>
-          <h1>日喀则市东嘎水库工程智慧建管平台</h1>
-          <p>Smart Construction Management Platform</p>
-        </div>
-        <div class="dg-login-visual"><img src="/images/construction-illustration.webp" alt="东嘎水库工程建设场景"></div>
-      </section>
-      <section class="dg-login-side">
-        <div class="dg-login-card">
-          <h2>用户登录</h2>
-          <p>请输入登录信息验证身份</p>
-          <div class="dg-login-tabs" role="tablist" aria-label="登录方式">
-            <button class="dg-login-tab" type="button" role="tab" data-mode="account" aria-selected="true">账号密码</button>
-            <button class="dg-login-tab" type="button" role="tab" data-mode="phone" aria-selected="false">手机验证码</button>
+    <div class="dg-login-card">
+      <h2>用户登录</h2>
+      <p>请输入登录信息验证身份</p>
+      <div class="dg-login-tabs" role="tablist" aria-label="登录方式">
+        <button class="dg-login-tab" type="button" role="tab" data-mode="account" aria-selected="true">账号密码</button>
+        <button class="dg-login-tab" type="button" role="tab" data-mode="phone" aria-selected="false">手机验证码</button>
+      </div>
+      <form id="dg-login-form" novalidate>
+        <div class="dg-login-panel" data-panel="account">
+          ${field("账号", "username", "text", "请输入账号", icons.user, "username")}
+          <div class="dg-field" data-field="password">
+            <div class="dg-field-head"><label for="dg-password">密码</label></div>
+            <div class="dg-input-wrap">${icons.lock}<input class="dg-input" id="dg-password" name="password" type="password" autocomplete="current-password" placeholder="请输入密码"><button class="dg-icon-button" type="button" id="dg-password-toggle" aria-label="显示密码">${icons.eye}</button></div>
+            <p class="dg-field-error" aria-live="polite"></p>
           </div>
-          <form id="dg-login-form" novalidate>
-            <div class="dg-login-panel" data-panel="account">
-              ${field("账号", "username", "text", "请输入账号", icons.user, "username")}
-              <div class="dg-field" data-field="password">
-                <div class="dg-field-head"><label for="dg-password">密码</label></div>
-                <div class="dg-input-wrap">${icons.lock}<input class="dg-input" id="dg-password" name="password" type="password" autocomplete="current-password" placeholder="请输入密码"><button class="dg-icon-button" type="button" id="dg-password-toggle" aria-label="显示密码">${icons.eye}</button></div>
-                <p class="dg-field-error" aria-live="polite"></p>
-              </div>
-              <div class="dg-login-options"><label class="dg-checkbox"><input type="checkbox" id="dg-remember">记住账号</label><button type="button" class="dg-text-button" id="dg-forgot">忘记密码？</button></div>
-            </div>
-            <div class="dg-login-panel" data-panel="phone" hidden>
-              ${field("手机号", "phone", "tel", "请输入11位手机号", icons.phone, "tel")}
-              <div class="dg-field" data-field="code">
-                <div class="dg-field-head"><label for="dg-code">验证码</label></div>
-                <div class="dg-code-row">
-                  <div class="dg-input-wrap">${icons.code}<input class="dg-input" id="dg-code" name="code" type="text" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="请输入6位验证码"></div>
-                  <button class="dg-code-button" type="button" id="dg-send-code">获取验证码</button>
-                </div>
-                <p class="dg-field-error" aria-live="polite"></p>
-              </div>
-            </div>
-            <button class="dg-login-submit" type="submit">${icons.enter}<span>登录</span></button>
-          </form>
-          <div class="dg-security">${icons.shield}<span>登录信息将被安全加密</span></div>
+          <div class="dg-login-options"><label class="dg-checkbox"><input type="checkbox" id="dg-remember">记住账号</label><button type="button" class="dg-text-button" id="dg-forgot">忘记密码？</button></div>
         </div>
-      </section>
+        <div class="dg-login-panel" data-panel="phone" hidden>
+          ${field("手机号", "phone", "tel", "请输入11位手机号", icons.phone, "tel")}
+          <div class="dg-field" data-field="code">
+            <div class="dg-field-head"><label for="dg-code">验证码</label></div>
+            <div class="dg-code-row">
+              <div class="dg-input-wrap">${icons.code}<input class="dg-input" id="dg-code" name="code" type="text" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="请输入6位验证码"></div>
+              <button class="dg-code-button" type="button" id="dg-send-code">获取验证码</button>
+            </div>
+            <p class="dg-field-error" aria-live="polite"></p>
+          </div>
+        </div>
+        <button class="dg-login-submit" type="submit">${icons.enter}<span>登录</span></button>
+      </form>
+      <div class="dg-security">${icons.shield}<span>登录信息将被安全加密</span></div>
     </div>
-    <footer class="dg-login-footer">© 2025 首筑网络技术（重庆）有限公司版权所有　渝公网安备50010602503931号　·　渝ICP备2022011679号　技术支持电话：023-6832970</footer>
     <div class="dg-overlay" id="dg-section-overlay" hidden>
       <section class="dg-section-modal" role="dialog" aria-modal="true" aria-labelledby="dg-section-title">
         <header class="dg-modal-head"><div><h3 id="dg-section-title">选择项目标段</h3><p>请选择本次进入系统需要管理的标段</p></div><button class="dg-modal-close" type="button" aria-label="关闭">×</button></header>
@@ -78,11 +65,12 @@
 
   function render() {
     if (document.getElementById("dg-login-app")) return;
-    document.body.classList.add("dg-login-ready");
-    const root = document.createElement("main");
+    const title = [...document.querySelectorAll("h1")].find(item => item.textContent.trim() === "用户登录");
+    const root = title?.closest(".relative.w-full.max-w-md");
+    if (!root) return setTimeout(render, 180);
     root.id = "dg-login-app";
+    root.classList.add("dg-embedded-card");
     root.innerHTML = appMarkup;
-    document.body.prepend(root);
     bind(root);
   }
 

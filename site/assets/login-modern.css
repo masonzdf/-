@@ -9,17 +9,12 @@
   --login-danger: #d94343;
 }
 
-body.dg-login-ready { margin: 0; background: #eaf2fb; }
-body.dg-login-ready > :not(#dg-login-app):not(script) { display: none !important; }
 #dg-login-app, #dg-login-app * { box-sizing: border-box; }
 #dg-login-app {
-  min-height: 100vh;
   color: var(--login-body);
   font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
-  background:
-    radial-gradient(circle at 12% 14%, rgba(255,255,255,.96) 0 8%, transparent 30%),
-    linear-gradient(132deg, #edf5fd 0%, #dceaf8 55%, #c8def4 100%);
 }
+.dg-embedded-card { padding: 24px !important; }
 .dg-login-shell {
   display: grid;
   grid-template-columns: minmax(0, 1.38fr) minmax(420px, .72fr);
@@ -72,8 +67,8 @@ body.dg-login-ready > :not(#dg-login-app):not(script) { display: none !important
   box-shadow: 22px 24px 70px rgba(28,82,132,.13);
 }
 .dg-login-card { width: 100%; animation: dg-card-in .42s ease-out both; }
-.dg-login-card h2 { margin: 0; color: var(--login-title); font-size: 25px; line-height: 1.3; }
-.dg-login-card > p { margin: 9px 0 24px; color: var(--login-muted); font-size: 13px; }
+.dg-login-card h2 { margin: 0; color: var(--login-title); font-size: 18px; line-height: 1.3; text-align: center; }
+.dg-login-card > p { margin: 9px 0 20px; color: var(--login-muted); font-size: 12px; text-align: center; }
 .dg-login-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; padding: 4px; border-radius: 9px; background: #f0f4f8; }
 .dg-login-tab { height: 38px; border: 0; border-radius: 7px; background: transparent; color: #708396; cursor: pointer; font-size: 13px; transition: .18s; }
 .dg-login-tab[aria-selected="true"] { background: #fff; color: var(--login-blue); font-weight: 700; box-shadow: 0 3px 10px rgba(29,67,102,.1); }
